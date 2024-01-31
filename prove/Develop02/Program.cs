@@ -116,6 +116,8 @@ namespace journal
                 }
             }
         }
+
+        //Create a string that holds the prompt
         private static string GetRandomPredefinedPrompt()
         {
             string[] prompts = {

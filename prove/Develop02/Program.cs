@@ -55,6 +55,8 @@ namespace journal
                         string response = Console.ReadLine();
                         Entry newEntry = new Entry(response, prompt);
                         myJournal.AddEntry(newEntry);
+                        Console.WriteLine("\nYour prompt has been recorded.\nPress any key to continue.");
+                        Console.ReadLine();
                         break;
 
 
@@ -62,6 +64,8 @@ namespace journal
 
                     case 2:
                         myJournal.Display();
+                        Console.WriteLine("\nPress any key to continue.");
+                        Console.ReadLine();
                         break;
 
                                 //OPTION 3: save the entries to a file and export
@@ -73,10 +77,14 @@ namespace journal
                         {
                             System.IO.File.WriteAllText(filenameSave, myJournal.Export());
                             Console.WriteLine("Journal saved successfully.");
+                            Console.WriteLine("\nPress any key to continue.");
+                            Console.ReadLine();
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine($"Error saving journal: {ex.Message}");
+                            Console.WriteLine("\nPress any key to continue.");
+                            Console.ReadLine();
                         }
                         break;
 
@@ -94,11 +102,15 @@ namespace journal
                             //Write this to let the user know the journal has been successfully loaded.
                             Console.WriteLine("Journal loaded successfully. Displaying contents:");
                             myJournal.Display();
+                            Console.WriteLine("\nPress any key to continue.");
+                            Console.ReadLine();
                         }
                         catch (Exception ex)
                         {
                             //Write this in case the program cannot find the file (user may need to specify the path)
-                            Console.WriteLine($"Error loading journal: {ex.Message}");
+                            Console.WriteLine($"Error loading journal: {ex.Message}\nPlease ensure the file exists under that name.");
+                            Console.WriteLine("\nPress any key to continue.");
+                            Console.ReadLine();
                         }
                         break;
 

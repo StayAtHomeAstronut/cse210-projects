@@ -17,7 +17,6 @@ class Scripture
 
     public void Display()
     {
-        //Console.Clear();
         Console.WriteLine(reference);
         Console.WriteLine(string.Join(" ", words.Select(word => word.IsHidden ? "_____" : word.Text)));
     }

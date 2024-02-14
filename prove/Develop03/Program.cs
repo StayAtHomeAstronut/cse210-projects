@@ -15,6 +15,7 @@ class Program
         {
             Console.WriteLine("Press Enter to hide more words or type 'quit' to exit:");
             string input = Console.ReadLine();
+            Console.Clear();
 
             if (input.ToLower() == "quit")
                 break;

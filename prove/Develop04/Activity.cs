@@ -62,11 +62,11 @@ namespace mindfullness
                         break;
                 }
 
-                // Move the cursor back to overwrite the previous character
-                Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-
                 // Wait before printing the next character
                 Thread.Sleep(millisecondsPerFrame);
+
+                // Move the cursor back to overwrite the previous character
+                Console.Write("\b \b");
             }
 
             // Clear the spinning line after the animation is finished
@@ -76,13 +76,13 @@ namespace mindfullness
             Console.WriteLine();
         }
 
-        // Accessor for getting the name of the activity
+        // Gets the name of the activity
         public string GetName()
         {
             return name;
         }
 
-        // Accessor for getting the prompts of the activity
+        // Gets the prompts of the activity
         public string[] GetPrompts()
         {
             return prompts;

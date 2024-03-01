@@ -9,10 +9,10 @@ namespace mindfullness
         // Constructor
         public Reflecting(string[] prompts) : base("Reflecting", prompts) { }
 
-        // Method to start the Reflecting activity
+        // starts the Reflecting activity
         public override void Start(int duration)
         {
-            // Display description, prompt, and program line
+            // Displays description, prompt, and program line
             Console.WriteLine($"Starting {GetName()} activity...");
             Console.WriteLine($"\nDescription: {GetDescription()}");
             Console.WriteLine($"\nPress Any Key to Continue");
@@ -44,23 +44,23 @@ namespace mindfullness
             Thread.Sleep(5000);
         }
 
-        // Method to get a random prompt
+        // gets a random prompt
         private string GetRandomPrompt(Random rand)
         {
             int index = rand.Next(GetPrompts().Length);
             return GetPrompts()[index];
         }
 
-        // Method to get the description of the Reflecting activity
+        // Gets the description of the Reflecting activity
         protected override string GetDescription()
         {
             return "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
         }
 
-        // Method to get the questions for reflection
+        // Gets the questions for reflection
         private string[] GetQuestions()
         {
-            // Sample list of questions
+            // List of questions
             return new string[]
             {
                 "Why was this experience meaningful to you?",

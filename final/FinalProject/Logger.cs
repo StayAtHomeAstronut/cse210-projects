@@ -66,7 +66,7 @@ class Logger
                         if (exerciseParts.Length == 2)
                         {
                             string exerciseName = exerciseParts[0].Trim();
-                            int intensity = int.Parse(exerciseParts[1].Trim());
+                            float intensity = float.Parse(exerciseParts[1].Trim());
 
                             // Create Exercise object and add it to the list
                             Exercise exercise = new Exercise(exerciseName);
